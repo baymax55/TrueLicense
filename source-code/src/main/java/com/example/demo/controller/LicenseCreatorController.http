@@ -1,0 +1,50 @@
+### getServerInfos
+GET http://192.168.110.206:20880/license/getServerInfos?
+    osName=linux
+
+###
+GET http://127.0.0.1:8080/license/getServerInfos?
+    osName=windows
+
+### generateLicense
+POST http://192.168.110.206:20880/license/generateLicense
+Content-Type: application/json
+
+{
+  "subject":"license_demo",
+  "privateAlias":"privateKey",
+  "keyPass":"cxyj123456",
+  "storePass":"cxyj123456",
+  "licensePath":"/root/license.lic",
+  "privateKeysStorePath":"/root/privateKeys.keystore",
+  "issuedTime":"2020-10-10 00:00:01",
+  "expiryTime":"2030-10-09 23:59:59",
+  "consumerType":"User",
+  "consumerAmount":1,
+  "description":"license demo",
+  "licenseCheckModel":{
+    "ipAddress": [
+      "172.17.0.1",
+      "192.168.110.206"
+    ],
+    "macAddress": [
+      "46:c3:6e:4a:40:3d",
+      "d6:96:00:a2:cd:90",
+      "3e:b5:21:8f:cb:7a",
+      "82:96:99:6e:6c:f5",
+      "4e:a2:ad:52:a0:26",
+      "d6:00:4e:04:72:f8",
+      "96:e1:65:ac:c7:44",
+      "5e:fe:d8:5b:fe:ff",
+      "74:3a:f4:ef:83:9b"
+    ],
+    "cpuSerial": "MAG B760M MORTAR WIFI (MS-7E01)",
+    "mainBoardSerial": "Default string"
+  }
+}
+
+### verify
+GET http://localhost:8080/license/verify
+
+### verify
+GET http://192.168.110.206:20880/license/verify

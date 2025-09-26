@@ -9,6 +9,7 @@ package com.example.demo.controller;
 
 import com.example.demo.license.LicenseCheckModel;
 import com.example.demo.license.LicenseCreatorParam;
+import com.example.demo.license.LicenseVerify;
 import com.example.demo.service.LicenseCreatorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +24,9 @@ import java.util.Map;
 public class LicenseCreatorController {
     @Autowired
     private LicenseCreatorService licenseCreatorService;
+
+    @Autowired
+    LicenseVerify licenseVerify;
 
     /**
      * <p>项目名称: true-license-demo </p>
@@ -54,5 +58,10 @@ public class LicenseCreatorController {
     @PostMapping("/generateLicense")
     public Map<String, Object> generateLicense(@RequestBody LicenseCreatorParam param) {
         return licenseCreatorService.generateLicense(param);
+    }
+
+    @GetMapping("/verify")
+    public boolean verify() {
+         return licenseVerify.verify();
     }
 }

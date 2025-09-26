@@ -20,6 +20,7 @@ import java.util.prefs.Preferences;
  * @author 方瑞冬
  * Lincense 校验、安装、卸载
  */
+
 @Slf4j
 public class LicenseVerify {
     /**

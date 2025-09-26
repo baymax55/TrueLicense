@@ -9,10 +9,12 @@ package com.example.demo.service.impl;
 
 import com.example.demo.license.*;
 import com.example.demo.service.LicenseCreatorService;
+import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+import java.security.Security;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -21,6 +23,12 @@ import java.util.Map;
  */
 @Service
 public class LicenseCreatorServiceImpl implements LicenseCreatorService {
+    static {
+        // 添加 BouncyCastle 作为加密提供者
+        if (Security.getProvider(BouncyCastleProvider.PROVIDER_NAME) == null) {
+            Security.addProvider(new BouncyCastleProvider());
+        }
+    }
     @Autowired
     private LicenseConfig licenseConfig;
 
