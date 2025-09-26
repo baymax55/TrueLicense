@@ -263,8 +263,8 @@ public class CustomLicenseManager extends LicenseManager {
      * @version 1.0
      */
     private boolean checkIpAddress(List<String> expectedList, List<String> serverList) {
-        if (expectedList != null && expectedList.size() > 0) {
-            if (serverList != null && serverList.size() > 0) {
+        if (expectedList != null && !expectedList.isEmpty()) {
+            if (serverList != null && !serverList.isEmpty()) {
                 for (String expected : expectedList) {
                     if (serverList.contains(expected.trim())) {
                         return true;

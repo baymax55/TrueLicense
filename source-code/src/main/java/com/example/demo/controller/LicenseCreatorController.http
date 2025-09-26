@@ -1,10 +1,8 @@
 ### getServerInfos
-GET http://192.168.110.206:20880/license/getServerInfos?
-    osName=linux
+GET http://192.168.110.206:20880/license/getServerInfos?osName=linux
 
 ###
-GET http://127.0.0.1:8080/license/getServerInfos?
-    osName=windows
+GET http://127.0.0.1:8080/license/getServerInfos?osName=windows
 
 ### generateLicense
 POST http://192.168.110.206:20880/license/generateLicense
@@ -15,8 +13,8 @@ Content-Type: application/json
   "privateAlias":"privateKey",
   "keyPass":"cxyj123456",
   "storePass":"cxyj123456",
-  "licensePath":"/root/license.lic",
-  "privateKeysStorePath":"/root/privateKeys.keystore",
+  "licensePath":"/data/cxkj/fireRescueServer/license/license.lic",
+  "privateKeysStorePath":"/data/cxkj/fireRescueServer/license/privateKeys.keystore",
   "issuedTime":"2020-10-10 00:00:01",
   "expiryTime":"2030-10-09 23:59:59",
   "consumerType":"User",

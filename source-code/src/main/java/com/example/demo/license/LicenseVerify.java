@@ -88,11 +88,11 @@ public class LicenseVerify {
             LicenseContent licenseContent = licenseManager.install(new File(licensePath));
             DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             installSuccess = true;
-            log.info("------------------------------- 证书安装成功 -------------------------------");
+            log.info("################### 证书安装成功 ###################");
             log.info(MessageFormat.format("证书校验通过，证书有效期：{0} - {1}", format.format(licenseContent.getNotBefore()), format.format(licenseContent.getNotAfter())));
         } catch (Exception e) {
             installSuccess = false;
-            log.error("------------------------------- 证书安装失败 -------------------------------");
+            log.error("################### 证书安装失败 ###################");
             log.error(e.getMessage(), e);
         }
     }
@@ -111,9 +111,9 @@ public class LicenseVerify {
         if (installSuccess) {
             try {
                 licenseManager.uninstall();
-                log.info("------------------------------- 证书卸载成功 -------------------------------");
+                log.info("################### 证书卸载成功 ###################");
             } catch (Exception e) {
-                log.error("------------------------------- 证书卸载失败 -------------------------------");
+                log.error("################### 证书卸载失败 ###################");
                 log.error(e.getMessage(), e);
             }
         }
