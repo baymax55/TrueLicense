@@ -90,6 +90,7 @@ public class LicenseVerify {
             installSuccess = true;
             log.info("################### 证书安装成功 ###################");
             log.info(MessageFormat.format("证书校验通过，证书有效期：{0} - {1}", format.format(licenseContent.getNotBefore()), format.format(licenseContent.getNotAfter())));
+            log.info("################### 证书安装成功 ###################");
         } catch (Exception e) {
             installSuccess = false;
             log.error("################### 证书安装失败 ###################");
