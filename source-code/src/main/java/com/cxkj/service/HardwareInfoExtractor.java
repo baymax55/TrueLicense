@@ -1,4 +1,4 @@
-package com.example.demo.service;
+package com.cxkj.service;
 
 import oshi.SystemInfo;
 import oshi.hardware.CentralProcessor;

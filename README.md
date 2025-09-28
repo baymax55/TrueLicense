@@ -835,7 +835,7 @@ public class CustomLicenseManager extends LicenseManager {
      * <p>方法描述: 获取当前服务器需要额外校验的 License 参数 </p>
      * <p>创建时间: 2020/10/10 13:16 </p>
      *
-     * @return com.example.demo.license.LicenseCheckModel
+     * @return license.com.cxkj.LicenseCheckModel
      * @author 方瑞冬
      * @version 1.0
      */
@@ -1318,8 +1318,8 @@ public class LicenseVerify {
  */
 package com.example.demo.service;
 
-import com.example.demo.license.LicenseCheckModel;
-import com.example.demo.license.LicenseCreatorParam;
+import license.com.cxkj.LicenseCheckModel;
+import license.com.cxkj.LicenseCreatorParam;
 
 import java.util.Map;
 
@@ -1334,7 +1334,7 @@ public interface LicenseCreatorService {
      * <p>创建时间: 2020/10/10 13:45 </p>
      *
      * @param osName 系统名称
-     * @return com.example.demo.license.LicenseCheckModel
+     * @return license.com.cxkj.LicenseCheckModel
      * @author 方瑞冬
      * @version 1.0
      */
@@ -1366,7 +1366,7 @@ public interface LicenseCreatorService {
 package com.example.demo.service.impl;
 
 import com.example.demo.license.*;
-import com.example.demo.service.LicenseCreatorService;
+import service.com.cxkj.LicenseCreatorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -1389,7 +1389,7 @@ public class LicenseCreatorServiceImpl implements LicenseCreatorService {
      * <p>创建时间: 2020/10/10 13:46 </p>
      *
      * @param osName 系统名称
-     * @return com.example.demo.license.LicenseCheckModel
+     * @return license.com.cxkj.LicenseCheckModel
      * @author 方瑞冬
      * @version 1.0
      */
@@ -1460,9 +1460,9 @@ public class LicenseCreatorServiceImpl implements LicenseCreatorService {
  */
 package com.example.demo.controller;
 
-import com.example.demo.license.LicenseCheckModel;
-import com.example.demo.license.LicenseCreatorParam;
-import com.example.demo.service.LicenseCreatorService;
+import license.com.cxkj.LicenseCheckModel;
+import license.com.cxkj.LicenseCreatorParam;
+import service.com.cxkj.LicenseCreatorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -1484,7 +1484,7 @@ public class LicenseCreatorController {
      * <p>创建时间: 2020/10/10 13:39 </p>
      *
      * @param osName 系统名称
-     * @return com.example.demo.license.LicenseCheckModel
+     * @return license.com.cxkj.LicenseCheckModel
      * @author 方瑞冬
      * @version 1.0
      */
@@ -1648,7 +1648,7 @@ license:
 ```
 package com.example.demo;
 
-import com.example.demo.license.LicenseVerify;
+import license.com.cxkj.LicenseVerify;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

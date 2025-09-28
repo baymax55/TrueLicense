@@ -3,15 +3,15 @@ server:
 # License 相关配置
 license:
   # 主题
-  subject: license_demo
+  subject: license_cxyj
   # 公钥别称
   publicAlias: publicCert
   # 访问公钥的密码
   storePass: cxyj123456
   # license 位置
-  # licensePath: E:/licenseTest/license.lic
-  licensePath: /data/cxkj/fireRescueServer/license/license.lic
+  licensePath: D:/license/license.lic
+#  licensePath: /data/cxkj/fireRescueServer/license/license.lic
 
   # 公钥位置
-  # publicKeysStorePath: E:/licenseTest/publicCerts.keystore
-  publicKeysStorePath: /data/cxkj/fireRescueServer/license/publicCerts.keystore
+  publicKeysStorePath: D:/license/publicCerts.keystore
+#  publicKeysStorePath: /data/cxkj/fireRescueServer/license/publicCerts.keystore
